@@ -1,7 +1,7 @@
-node_modules/
-uploads/
+*.bak
+*.bk
 *.env
-.DS_Store
-*.log
-dist/
-.cache/
+.cache
+__pycache__/
+contributors.txt
+temp_repo_clone
