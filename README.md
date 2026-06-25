@@ -1,21 +1,33 @@
-# 🇮🇳 Swachh Bharat Monitor
+<div align="center">
+  <img src="assets/banner.svg" alt="Swachh Bharat Monitor Banner" width="800" />
 
-A crowd-sourced cleanliness tracking web app for 1000 Indian cities. Citizens upload photos of garbage sightings — tagged with GPS coordinates — and the app maps each report to the nearest city, computes a live cleanliness score, and renders an interactive heatmap of India.
+  # 🇮🇳 Swachh Bharat Monitor
+  
+  <p><strong>A crowd-sourced civic tech cleanliness tracking web app for 1000 Indian cities.</strong></p>
+
+  <p>
+    <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a>
+    <a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
+    <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
+  </p>
+</div>
+
+Citizens upload photos of garbage sightings — tagged with GPS coordinates — and the app maps each report to the nearest city, computes a live cleanliness score, and renders an interactive heatmap of India.
 
 ---
 
-## Features
+## ✨ Features
 
-- **Interactive India heatmap** — city dots colour-coded from green (clean) to red (dirty), togglable heat layer
-- **Report submission** — photo upload with automatic GPS-to-city mapping (25 km radius)
-- **Live rankings** — top 50 cities ranked by cleanliness score, filterable and searchable
-- **REST API** — ready for mobile app integration (see [API Reference](#api-reference))
-- **Decay-weighted scoring** — recent reports penalise cities more than old ones (half-life: 1 week)
-- **Seed data** — demo reports pre-loaded for 30+ cities so the map isn't empty on first run
+- 🗺️ **Interactive India Heatmap** — city dots colour-coded from green (clean) to red (dirty), togglable heat layer for tracking waste management issues.
+- 📸 **Report Submission** — garbage sighting photo upload with automatic GPS-to-city mapping (25 km radius).
+- 🏆 **Live Rankings** — top 50 cities ranked by cleanliness score, filterable and searchable for urban tracking.
+- 🔌 **REST API** — ready for mobile app integration (see [API Reference](#-api-reference)).
+- 📉 **Decay-weighted Scoring** — recent reports penalise cities more than old ones (half-life: 1 week).
+- 🌱 **Seed Data** — demo reports pre-loaded for 30+ cities so the map isn't empty on first run.
 
 ---
 
-## Tech stack
+## 🛠️ Tech Stack
 
 | Layer | Technology |
 |-------|-----------|
@@ -28,13 +40,13 @@ A crowd-sourced cleanliness tracking web app for 1000 Indian cities. Citizens up
 
 ---
 
-## Getting started
+## 🚀 Getting Started
 
-### Prerequisites
+### 📋 Prerequisites
 - Node.js ≥ 18
 - npm ≥ 9
 
-### Install & run
+### 💻 Install & Run
 
 ```bash
 git clone https://github.com/YOUR_USERNAME/swachh-bharat.git
@@ -43,7 +55,7 @@ npm install
 npm start
 ```
 
-Open **http://localhost:3000** in your browser.
+Open **http://localhost:3000** in your browser to view the application.
 
 For development with auto-reload:
 ```bash
@@ -52,9 +64,9 @@ npm run dev
 
 ---
 
-## Project structure
+## 📁 Project Structure
 
-```
+```text
 swachh-bharat/
 ├── backend/
 │   ├── server.js          # Express entry point
@@ -79,7 +91,7 @@ swachh-bharat/
 
 ---
 
-## API Reference
+## 📡 API Reference
 
 Base URL: `http://localhost:3000/api/v1`
 
@@ -102,7 +114,7 @@ Submit a garbage sighting.
 ```json
 {
   "message": "Report submitted successfully",
-  "report": { "id": "uuid", "cityId": "MUM", "cityName": "Mumbai", ... },
+  "report": { "id": "uuid", "cityId": "MUM", "cityName": "Mumbai", "score": 42 },
   "updatedScore": 42
 }
 ```
@@ -143,7 +155,7 @@ City-level aggregated points — one entry per city with `score` and `intensity`
 
 ---
 
-## Extending to 1000 cities
+## 📈 Extending to 1000 Cities
 
 The seed data in `backend/data/cities.js` contains 100 cities. To extend:
 
@@ -158,27 +170,27 @@ A full 1000-city dataset can be sourced from [Census of India](https://censusind
 
 ---
 
-## Production roadmap
+## 🛣️ Production Roadmap
 
 | What | How |
 |------|-----|
-| Persistent storage | Replace `store.js` with PostgreSQL + PostGIS (use `ST_DWithin` for GPS→city lookup) |
-| Image storage | Move `uploads/` to AWS S3 or Cloudflare R2 |
-| Auth for mobile API | Add JWT middleware on `POST /reports` |
-| Rate limiting | `express-rate-limit` on the reports endpoint |
-| Deploy | Render, Railway, or a ₹500/mo VPS |
+| 💾 Persistent storage | Replace `store.js` with PostgreSQL + PostGIS (use `ST_DWithin` for GPS→city lookup) |
+| ☁️ Image storage | Move `uploads/` to AWS S3 or Cloudflare R2 |
+| 🔒 Auth for mobile API | Add JWT middleware on `POST /reports` |
+| 🛑 Rate limiting | `express-rate-limit` on the reports endpoint |
+| 🚀 Deploy | Render, Railway, or a VPS |
 
 ---
 
-## Contributing
+## 🤝 Contributing
 
 PRs welcome — especially for:
-- More city data
-- State-level filtering on the heatmap
-- Mobile-responsive improvements
+- 🏙️ More city data
+- 🗺️ State-level filtering on the heatmap
+- 📱 Mobile-responsive improvements
 
 ---
 
-## License
+## 📜 License
 
 MIT
