@@ -14,6 +14,10 @@
 
 Citizens upload photos of garbage sightings — tagged with GPS coordinates — and the app maps each report to the nearest city, computes a live cleanliness score, and renders an interactive heatmap of India.
 
+<div align="center">
+  <img src="assets/Screenshot_1.png" alt="App Screenshot" width="800" />
+</div>
+
 ---
 
 ## ✨ Features
